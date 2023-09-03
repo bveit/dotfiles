@@ -9,49 +9,24 @@ M.general = {
   }
 }
 
-M.dap = {
+M.comment = {
   plugin = true,
-  n = {
-    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
-    ["<leader>dus"] = {
-      function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
-      end,
-      "Open debugging sidebar"
-    }
-  }
-}
 
-M.dap_go = {
-  plugin = true,
+  -- toggle comment in both modes
   n = {
-    ["<leader>dgr"] = {
+    ["§"] = {
       function()
-        require('dap-go').debug_test()
+        require("Comment.api").toggle.linewise.current()
       end,
-      "Debug go test"
+      "Toggle comment",
     },
-    ["<leader>dgl"] = {
-      function()
-        require('dap-go').debug_last()
-      end,
-      "Debug last go test"
-    }
-  }
-}
+  },
 
-M.crates = {
-  plugin = true,
-  n = {
-    ["<leader>rcu"] = {
-      function ()
-        require('crates').upgrade_all_crates()
-      end,
-      "update crates"
-    }
-  }
+  v = {
+    ["§"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "Toggle comment",
+    },
+  },
 }
-
 return M
