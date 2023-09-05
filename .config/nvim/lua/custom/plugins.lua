@@ -1,37 +1,33 @@
-local cmp = require "cmp"
-
 local plugins = {
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  {
-    "zbirenbaum/copilot.lua",
-    lazy = false,
-    opts = function ()
-      return require "custom.configs.copilot"
-    end,
-    config = function(_, opts)
-      require("copilot").setup(opts)
-    end
-  },
-  {
-    "anuvyklack/pretty-fold.nvim",
-    lazy = false,
-    config = function()
-      require("pretty-fold").setup()
-    end
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "gopls",
-        "rust-analyzer",
-        "python-lsp-server",
-      },
-    },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   lazy = false,
+  --   opts = function ()
+  --     return require "custom.configs.copilot"
+  --   end,
+  --   config = function(_, opts)
+  --     require("copilot").setup(opts)
+  --   end
+  -- },
+  -- {
+  --   "anuvyklack/pretty-fold.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("pretty-fold").setup()
+  --   end
+  -- },
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       "python-lsp-server",
+  --     },
+  --   },
+  -- },
   {
     "neovim/nvim-lspconfig",
     config = function()
