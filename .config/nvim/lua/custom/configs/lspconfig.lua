@@ -4,6 +4,17 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 -- local util = require "lspconfig/util"
 --
+lspconfig.solargraph.setup{
+  settings = {
+    solargraph = {
+      commandPath = '~/bin/solargraph',
+      diagnostics = true,
+      completion = true
+    }
+  },
+
+  on_attach = on_attach
+}
 -- lspconfig.pylsp.setup{
 --   on_attach = on_attach,
 --   capabilities = capabilities,
