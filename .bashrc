@@ -93,5 +93,5 @@ if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# . "$HOME/.cargo/env"
