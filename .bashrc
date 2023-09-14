@@ -5,12 +5,21 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+
+
+
+export PATH=$HOME/.rbenv/shims:$PATH
+
+
+
+
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
+
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -93,5 +102,3 @@ if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
