@@ -93,7 +93,7 @@ alias lssh="lsof -i -n | egrep '\<ssh\>'"
 # run sdoc generation
 alias sdoc="python3 ~/scripts/generate_sdoc.py *.sdoc *.png"
 
-alias ll="ls -lhtr"
+alias ll="ls -lhtr --color=auto"
 
 unset rc
 
