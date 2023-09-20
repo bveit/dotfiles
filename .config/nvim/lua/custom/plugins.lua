@@ -35,5 +35,9 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    'tpope/vim-surround',
+    lazy = false
+  }
 }
 return plugins

@@ -8,7 +8,7 @@ lspconfig.solargraph.setup{
   settings = {
     solargraph = {
       commandPath = '~/bin/solargraph',
-      diagnostics = true,
+      diagnostics = false,
       completion = true
     }
   },
