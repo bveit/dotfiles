@@ -10,6 +10,7 @@ fi
 
 export PATH=$HOME/.rbenv/shims:$PATH
 
+export PS1="\n\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
 
 
 

@@ -3,6 +3,19 @@ local plugins = {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+
+  -- markdown preview
+  {
+    "ellisonleao/glow.nvim",
+    lazy = false,
+    config = function ()
+      require('glow').setup({
+        style = "dark",
+        width = 120,
+      })
+    end,
+    cmd = "Glow"
+  },
   -- {
   --   "zbirenbaum/copilot.lua",
   --   lazy = false,
@@ -38,6 +51,23 @@ local plugins = {
   {
     'tpope/vim-surround',
     lazy = false
+  },
+  {
+    'FabijanZulj/blame.nvim',
+    lazy = false,
+    config = function()
+      require('blame').setup({
+        width = 50,
+        merge_consecutive = true,
+      })
+    end
+  },
+  {
+    'lewis6991/spaceless.nvim',
+    lazy = false,
+    config = function()
+      require'spaceless'.setup()
+    end
   }
 }
 return plugins

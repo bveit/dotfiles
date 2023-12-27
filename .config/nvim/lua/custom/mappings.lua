@@ -29,4 +29,12 @@ M.comment = {
     },
   },
 }
+
+M.blame = {
+  n = {
+    ["<leader>gb"] = { ":ToggleBlame<CR><C-h>", "Toggle Blame" },
+    -- ["<leader>gbe"] = { ":EnableBlame<CR>:wincmd p<CR>", "Enable Blame" },
+    -- ["<leader>gbd"] = { ":DisableBlame<CR>", "Disable Blame" },
+  }
+}
 return M

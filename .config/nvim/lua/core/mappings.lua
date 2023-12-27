@@ -447,7 +447,7 @@ M.gitsigns = {
       "Preview hunk",
     },
 
-    ["<leader>gb"] = {
+    ["<leader>gbl"] = {
       function()
         package.loaded.gitsigns.blame_line()
       end,

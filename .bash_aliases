@@ -38,7 +38,15 @@ function gshow {
   git show --color "$1" | less -R
 }
 
-alias svn_tunnel='ssh -fNL 3690:svn.sitrox.com:3690 vbillinger@dev37.sitrox.com'
+function nvim {
+    if [ -d "$1" ]; then
+      command nvim -c "cd $1 | NvimTreeToggle"
+    else
+        command nvim "$@"
+    fi
+}
+
+alias svntunnel='ssh -fNL 3690:svn.sitrox.com:3690 vbillinger@dev37.sitrox.com'
 
 # vim with clipboard
 # use "+ y to copy to clipboard
@@ -78,9 +86,10 @@ done"'
 # git alias
 alias ga='git add .'
 alias gc='git commit -m'
-alias gs='git status --color | less -R'
+alias gs='git status | less -R'
 alias gl='git log --color --abbrev-commit --reverse | less -R +G'
 alias gls='git log --color --abbrev-commit --pretty=oneline --reverse | less -R +G'
+alias glt="git log --color --graph --pretty=tformat:'\t%C(red)%h%C(reset) - %<(50,trunc)%s %C(green)%<(15,trunc)%cr %C(bold blue)%<(15,trunc)%an %C(reset)%C(yellow)%d' --abbrev-commit | less -R"
 alias gb='git branch'
 alias gd='git diff --color | less -R'
 alias gco='git checkout'

@@ -3,3 +3,6 @@
 --
 -- -- Disable persistent undo
 -- vim.opt.undofile = false
+-- listchars=eol:↵,trail:~,tab:>-,nbsp:␣
+-- vim.cmd(hi EoLSpace ctermbg=238 guibg=#333333)
+-- vim.cmd(match EoLSpace /\s\+$/)
