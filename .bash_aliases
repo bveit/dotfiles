@@ -98,3 +98,6 @@ alias lssh="lsof -i -n | egrep '\<ssh\>'"
 alias sdoc="python3 ~/scripts/generate_sdoc.py *.sdoc *.png"
 
 alias ll="ls -lhtr --color=auto"
+
+# zero tier for VPN
+alias zti="zerotier-cli info"
