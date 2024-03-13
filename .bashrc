@@ -5,14 +5,9 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-
-
-
 export PATH=$HOME/.rbenv/shims:$PATH
 
 export PS1="\n\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
-
-
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]

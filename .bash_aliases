@@ -85,8 +85,8 @@ done"'
 
 # git alias
 alias ga='git add .'
-alias gc='git commit -m'
-alias gs='git status | less -R'
+alias gc='git commit'
+alias gs='git status'
 alias gl='git log --color --abbrev-commit --reverse | less -R +G'
 alias gls='git log --color --abbrev-commit --pretty=oneline --reverse | less -R +G'
 alias glt="git log --color --graph --pretty=tformat:'\t%C(red)%h%C(reset) - %<(50,trunc)%s %C(green)%<(15,trunc)%cr %C(bold blue)%<(15,trunc)%an %C(reset)%C(yellow)%d' --abbrev-commit | less -R"
