@@ -41,3 +41,5 @@ if [ -e $HOME/.bash_aliases ]; then
 fi
 
 bind "set completion-ignore-case on"
+
+eval "$(rbenv init - bash)"
