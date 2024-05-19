@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 export PATH=$HOME/.rbenv/shims:$PATH
+export EDITOR=vim
 
 export PS1="\n\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
 
@@ -43,3 +44,4 @@ fi
 bind "set completion-ignore-case on"
 
 eval "$(rbenv init - bash)"
+
