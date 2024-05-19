@@ -50,7 +50,7 @@ alias svntunnel='ssh -fNL 3690:svn.sitrox.com:3690 vbillinger@dev37.sitrox.com'
 
 # vim with clipboard
 # use "+ y to copy to clipboard
-alias vim='gvim -v'
+# alias vim='gvim -v'
 
 # docker
 alias gdock='docker-compose -f /home/vbillinger/Documents/globaldocker/docker-compose.yml'
