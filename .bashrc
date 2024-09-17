@@ -43,5 +43,7 @@ fi
 
 bind "set completion-ignore-case on"
 
-eval "$(rbenv init - bash)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 

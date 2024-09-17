@@ -110,3 +110,16 @@ alias ll="ls -lhtr --color=auto"
 
 # zero tier for VPN
 alias zti="zerotier-cli info"
+
+sfp(){
+  local source=$1
+  local destination=$2
+  rsync -avz pi:/mnt/samsung_ssd/sharep600/"$source" ~/Desktop/"$destination"
+}
+
+
+stp(){
+  local source=$1
+  local destination=$2
+  rsync -avz ~/Desktop/"$source" pi:/mnt/samsung_ssd/sharep600/"$destination" 
+}
