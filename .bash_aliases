@@ -30,8 +30,8 @@ function compat {
     # Windows / Office sitrox_office_to_pdf_converter test Machine:
     (pdfgen) name="win10-pdfgen" ;;
   esac
-  #rdesktop -u Sitrox -p - -g 1900x1000 $server
-  xfreerdp /u:Sitrox /p:sitrox /w:1680 /h:960 /v:$name.$server
+  # rdesktop -u Sitrox -p sitrox -g 1901x1000 $name.$server -V 1.0
+  xfreerdp /u:Sitrox /p:sitrox /w:3362 /h:1920 /v:$name.$server /tls-seclevel:0
 }
 
 function gshow {
@@ -128,4 +128,8 @@ stp(){
   local source=$1
   local destination=$2
   rsync -avz ~/Desktop/"$source" pi:/mnt/samsung_ssd/sharep600/"$destination" 
+}
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }

@@ -43,7 +43,12 @@ fi
 
 bind "set completion-ignore-case on"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - bash)"
 
+eval "$(fzf --bash)"
 
+HISTSIZE=50000
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export LANG="en_US.UTF-8" # (updated)
