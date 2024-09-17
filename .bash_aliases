@@ -111,6 +111,12 @@ alias ll="ls -lhtr --color=auto"
 # zero tier for VPN
 alias zti="zerotier-cli info"
 
+alias dockerexec='docker exec -it'
+alias foldersizes='sudo du -h --max-depth=1'
+alias plugoff="mosquitto_pub -h localhost -t 'zigbee2mqtt/plug/set' -m '{\"state\": \"OFF\"}'"
+alias plugon="mosquitto_pub -h localhost -t 'zigbee2mqtt/plug/set' -m '{\"state\": \"ON\"}'"
+alias dock="docker-compose"
+
 sfp(){
   local source=$1
   local destination=$2
