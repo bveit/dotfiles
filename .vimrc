@@ -62,10 +62,10 @@ Plug 'mileszs/ack.vim'                      " Ack Searching (needed for Ag)
 
 " AUTOCOMPLETION
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   " sudo pip3 install pynvim
-  Plug 'Shougo/deoplete.nvim'
+  " Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
@@ -210,7 +210,7 @@ vnoremap <leader>F y:Ack!<Space>-Q<Space>"<c-r>=escape(@",'/\')<cr>"
 " AUTOCOMPLETION
 " Plugin: Shougo/deoplete.nvim
 " enable autocompletion
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 " select next entry with tab
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " Plugin: deoplete-plugins/deoplete-tag

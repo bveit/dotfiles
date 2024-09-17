@@ -45,10 +45,10 @@ bind "set completion-ignore-case on"
 
 eval "$(rbenv init - bash)"
 
-eval "$(fzf --bash)"
+# eval "$(fzf --bash)"
 
 HISTSIZE=50000
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export LANG="en_US.UTF-8" # (updated)
