@@ -5,8 +5,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export PATH=$HOME/.rbenv/shims:$PATH
-export EDITOR=vim
+# export PATH=$HOME/.rbenv/shims:$PATH
+export EDITOR=gvim
 
 export PS1="\n\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
 
@@ -43,7 +43,7 @@ fi
 
 bind "set completion-ignore-case on"
 
-eval "$(rbenv init - bash)"
+# eval "$(rbenv init - bash)"
 
 # eval "$(fzf --bash)"
 
