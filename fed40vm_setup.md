@@ -165,3 +165,44 @@ services:
     restart: unless-stopped
 ```
 
+# rails
+## nginx setup
+```
+server {
+  listen 80;
+  server_name demo.sp600.duckdns.org;
+
+  # Redirect HTTP to HTTPS
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  server_name demo.sp600.duckdns.org;
+
+  ssl_certificate /etc/letsencrypt/live/demo.sp600.duckdns.org/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/demo.sp600.duckdns.org/privkey.pem;
+  ssl_protocols TLSv1.2 TLSv1.3;
+
+  location / {
+    proxy_pass http://localhost:3000;  # Vaultwarden HTTP interface
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+  }
+
+  # Cable websocket
+  location /cable {
+    proxy_pass http://localhost:3000/cable;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_read_timeout 86400; # prevents timeout for WebSocket connections
+  }
+}
+```

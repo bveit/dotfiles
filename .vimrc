@@ -20,6 +20,7 @@ set number                      " display line numbers on the left
 set relativenumber              " show relative line numbers on the left
 set shiftwidth=2                " number of spaces that <Shift> counts for
 set tabstop=2                   " number of spaces that <Tab> counts for
+set softtabstop=2                   " number of spaces that <Tab> counts for
 set expandtab                   " use spaces instead of tabs
 set smartindent                 " use smart autoindenting when starting new lines
 set scrolloff=8                 " do not let the cursor scroll below or above N lines when scrolling
