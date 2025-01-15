@@ -1,3 +1,8 @@
 *~
-.emacs.d/session.*
-.emacs.d/#*#
+.config/BraveSoftware
+.config/Mousepad
+.config/Thunar
+.config/dconf
+.config/mimeapps.list
+.config/pulse
+.config/xfce4

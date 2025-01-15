@@ -38,13 +38,13 @@ function gshow {
   git show --color "$1" | less -R
 }
 
-function nvim {
-    if [ -d "$1" ]; then
-      command nvim -c "cd $1 | NvimTreeToggle"
-    else
-        command nvim "$@"
-    fi
-}
+# function nvim {
+#     if [ -d "$1" ]; then
+#       command nvim -c "cd $1 | NvimTreeToggle"
+#     else
+#         command nvim "$@"
+#     fi
+# }
 
 alias svntunnel='ssh -fNL 3690:svn.sitrox.com:3690 vbillinger@dev37.sitrox.com'
 
