@@ -34,8 +34,8 @@ set smartcase                   " overwrite ignorecase option if searching for c
 " misc
 set hidden                      " allow changing buffers with unsaved changes
 set history=1000                " amount of commands to keep (default: 50)
-" set mouse=a                     " enable mouse support in all modes
-set mouse=                      " disable the bloody mouse
+set mouse=a                     " enable mouse support in all modes
+" set mouse=                      " disable the bloody mouse
 set splitbelow                  " open new split panes on bottom (instead of top)
 set splitright                  " open new split panes to the right (instead of left)
 set clipboard=unnamedplus
@@ -236,13 +236,14 @@ let g:ruby_heredoc_syntax_filetypes = {
 " Plugin: joshdick/onedark.vim
 " Plugin: preservim/nerdtree
 " toggle nerd tree
-noremap <C-n> :NERDTreeToggle %<CR>
-" noremap <C-m> :NERDTreeFind<CR>
+" noremap <C-n> :NERDTreeToggle %<CR>
+noremap <C-m> :NERDTreeFind<CR>
 "
 " Plugin: tpope/vim-commentary
 " toggle line comment
 noremap § :Commentary<CR>
-" Plugin: tpope/vim-dadbod
+" for databases
+" Plugin: tpope/vim-dadbod 
 " Plugin: tpope/vim-endwise
 " Plugin: tpope/vim-fugitive
 " Plugin: tpope/vim-rails
@@ -400,7 +401,10 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dark'
+let g:airline_theme = 'minimalist'
+set laststatus=2
+hi StatusLine cterm=NONE ctermbg=NONE ctermfg=NONE
+hi StatusLineNC cterm=NONE ctermbg=NONE ctermfg=NONE
 
 
 " Airline symbols
