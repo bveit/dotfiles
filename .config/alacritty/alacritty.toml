@@ -1,5 +1,5 @@
 [font]
-size = 10
+size = 12
 
 [env]
 TERM = "xterm-256color"
@@ -8,5 +8,5 @@ TERM = "xterm-256color"
 #background = "#000000"
 
 [window]
-opacity = 0.9
+opacity = 1.0
 
