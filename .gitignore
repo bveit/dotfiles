@@ -6,3 +6,7 @@
 .config/mimeapps.list
 .config/pulse
 .config/xfce4
+.emacs.d/session.*
+.emacs.d/#*#
+.DS_Store
+.config/iterm2/
