@@ -45,9 +45,9 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Lockscreen
-exec xss-lock -- i3lock -e -n -i "/home/vbillinger/Bilder/lockpaper.png" -t &
+exec xss-lock -- i3lock -e -n -i $HOME/.config/i3/lock_1920_1080.png -t &
 #bindsym $mod+x exec i3lock -e -n -i "/home/vbillinger/Bilder/lockpaper.png" -t
-bindsym $mod+y exec i3lock -e -n -i "/home/vbillinger/Bilder/lockpaper.png" -t
+bindsym $mod+y exec i3lock -e -n -i $HOME/.config/i3/lock_1920_1080.png -t
 
 # Picom (desktop animations)
 exec_always --no-startup-id picom &
