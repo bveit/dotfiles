@@ -100,6 +100,11 @@ alias res='source ~/.bashrc'
 # list ssh tunnels
 alias lssh="lsof -i -n | egrep '\<ssh\>'"
 
+# connect to cisco client
+# pass1 = ssl password
+# pass2 = otp password setup in authenticator
+alias ethvpn="sudo openconnect -u bveit@student-net.ethz.ch --useragent=AnyConnect -g student-net sslvpn.ethz.ch"
+
 # mount gdrive
 # alias gdrive='rclone mount drive:passwords ~/gdrive --daemon'
 
@@ -133,3 +138,4 @@ stp(){
 batdiff() {
     git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
+
